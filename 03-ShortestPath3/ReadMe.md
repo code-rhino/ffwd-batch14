@@ -2,6 +2,8 @@
 
 [Video](https://vimeo.com/954382867/dd52a4539f?share=copy)
 
+[Graphic](https://lucid.app/lucidchart/0a08e420-c001-4159-b5d1-41e128926f3e/edit?viewport_loc=-1396%2C-558%2C3156%2C1833%2C0_0&invitationId=inv_d60c8182-8187-4ab3-8fb5-0adaf1ca03ea)
+
 This walkthrough explains how to implement a Breadth-First Search (BFS) algorithm to find the shortest path for a knight on a chessboard.
 
 ### 1. Introduction
