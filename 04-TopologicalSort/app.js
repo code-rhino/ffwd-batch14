@@ -1,19 +1,21 @@
-function topologicalSort(graph) {
-    let visited = new Set();
+
+function dfs(graph, node, visted, stack){
+    if(visted.has(node))
+        return;
+    visted.add(node);
+    for(let neighbor of graph[node]){
+        dfs(graph, neighbor, visted, stack)
+    }
+    stack.push(node);
+}
+
+function topologicalSort(graph){
+    let visted = new Set();
     let stack = [];
 
-    function dfs(node) {
-        if (visited.has(node)) return;
-        visited.add(node);
-        for (let neighbor of graph[node]) {
-            dfs(neighbor);
-        }
-        stack.push(node);
-    }
-
-    for (let node in graph) {
-        if (!visited.has(node)) {
-            dfs(node);
+    for (let node in graph){
+        if(!visted.has(node)){
+            dfs(graph, node, visted, stack);
         }
     }
 
@@ -32,3 +34,5 @@ let graph = {
 
 let result = topologicalSort(graph);
 console.log("Topological Sort:", result);
+
+//Topological Sort: [ 'A', 'C', 'F', 'B', 'E', 'D' ]
